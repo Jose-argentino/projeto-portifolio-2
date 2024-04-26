@@ -1,0 +1,497 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: "Roboto Slab", serif;
+}
+
+html{
+    /* scroll com efeiro "suave" */
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;    
+}
+
+header > img{
+    width: 120px;    
+}
+
+header{
+    display: flex;
+    justify-content: end;
+    max-width: 1200px;
+    margin: 0 auto; 
+    /* centralizacao vertical dos elementos  */
+    align-items: center;
+    min-height: 20vh; 
+}
+
+#bars{
+    display: none;
+}
+
+#menu{
+    display: flex;    
+    /* espaco entre os elementos do menu */
+    gap: 10px;   
+    /* tira o marcador da lista(remove a bolinha) */
+    list-style: none;
+}
+
+#menu a{
+    /* remove o sublinhado do link */
+    text-decoration: none;
+    /* muda a cor do texto */
+    color: #000;
+    /* define o espaco interno do elemento */
+    padding: 8px 18px; 
+    /* define o tamanho da fonte, rem e uma medida de fonte responsiva */
+    font-size:1.3rem;
+}
+
+#perfil{
+    display: grid;
+    grid-template-columns: 1fr 2fr;    
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 80vh;   
+    gap: 110px;
+    align-items: center;    
+}
+
+#perfil-dados > h1{
+    font-size: 4rem;
+    line-height: 1.4; 
+    font-weight: 700;
+    font-style: normal; 
+      
+}
+
+#perfil-dados > h2{
+    padding-bottom: 0px;
+    margin-bottom:0px ;
+}
+
+#perfil-dados > p{
+    margin-top: 0px;
+    color: #6e6d6d;
+}
+
+/* sessao projetos - inicio */
+#projetos{
+    display: grid;
+    grid-template-columns: 1fr 2fr;    
+    max-width: 1200px;
+    align-items: center;
+    margin: 0 auto;
+    gap: 110px;
+    min-height: 100vh;
+    padding-bottom:20px;
+    align-items: center;
+}
+
+#projetos h2{    
+    font-size: 8rem;    
+    line-height: 1; 
+    text-transform: uppercase;
+    word-break: break-all;
+    max-width: 4ch;   
+    color: #202D73;
+}
+
+.principal-destaque{
+    font-weight: bold;
+    background: #202c73;
+    padding: 4px;
+    border-radius: 2px 6px;
+    color: #FFF;
+}
+
+#projetos-texto-principal{
+    line-height: 2.0; 
+    font-size: 1.3rem; 
+    margin-bottom: 4rem;  
+}
+
+#projetos-lista{
+    background: #202c73;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);    
+    color: #FFF;
+    padding: 20px;
+    gap: 20px;    
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+#projetos-lista h3{
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+#projetos-lista p{
+    margin: 0;
+    padding: 0;
+    color: #b9b8b8;
+}
+
+#projetos-tags{
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    gap: 10px;  
+    /* alinhamento vertical */
+    /* 
+        start   = inicio
+        center  = centro
+        end     = final
+    */
+    align-items: start;  
+    flex-wrap: wrap;       
+    
+}
+
+#projetos-tags li{
+    background-color: #FFF;
+    color: #023E73;    
+    border-radius: 4px;
+    padding: 4px 8px;
+    color: #000;
+}
+/* sessao projetos - final */
+
+/* sessao cursos - inicio */
+#cursos{
+    background: #202c73;  
+    min-height: 100vh;  
+}
+
+#cursos-principal{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 0 auto;
+    width: 1200px;        
+    gap: 110px;
+    color: #FFF;
+    align-items: center;
+}
+
+#cursos-principal h2{
+    font-size: 8rem;
+    max-width: 4ch;
+    text-transform: uppercase;
+    word-break: break-all;    
+}
+
+
+#cursos-texto-principal{
+    line-height: 2.0; 
+    font-size: 1.3rem; 
+    margin-bottom: 4rem;    
+}
+
+#cursos-texto-destaque{
+    background: #FFF;
+    color: #202c73;
+    font-weight: bold;
+    border-radius: 2px 6px;
+    padding: 4px;
+}
+
+#cursos-lista{    
+    display: flex;  
+    gap: 10px;
+}
+
+.cursos-item{
+    background: #000;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 4px;
+    flex: 1;
+    flex-wrap: wrap;     
+}
+
+
+.cursos-titulo{
+    flex: 1;
+    font-weight: bold;
+}
+
+.cursos-nivel, .cursos-local{
+    color:#b9b8b8;
+}
+
+#cursos-complementares{
+    margin-top: 40px;
+}
+
+#cursos-complementares h3{
+    color: #b9b8b8;
+}
+
+
+.cursos-complementares-item{
+    display: flex;
+    justify-content: space-between;    
+}
+
+#idiomas h3{
+    color: #b9b8b8
+}
+
+.idiomas-cinza{
+    color:#b9b8b8;
+}
+/* sessao cursos - final */
+
+
+/* inicio footer */
+footer{
+    /* background:#FF ; */    
+    min-height: 100vh;
+
+}
+
+#footer-conteudo{
+    max-width: 1200px;
+    margin: 0 auto;        
+}
+
+#form-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;    
+}
+
+#form-grid input,select{    
+    padding: 12px 20px;
+    border: 1px solid #202c73;
+    border-radius: 4px;
+}
+
+.btn-contato{    
+    padding: 12px 20px;
+    background: #202c73;
+    color: #FFF;
+    text-transform: uppercase;
+    margin: 20px 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;    
+    cursor: pointer;
+}
+
+#footer-conteudo h2{
+    font-size: 5rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #202c73;
+    letter-spacing: 1.2rem;
+}
+
+#footer-inferior{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;   
+    padding: 40px 0;    
+}
+
+#footer-inferior div{    
+    /* background: violet;     */
+}
+
+#footer-inferior a{    
+    padding: 10px 0px;
+    text-decoration: none;
+    color:#000;
+}
+
+#footer-inferior a:hover{
+    color: #000000c7;
+}
+
+.alinhar-centro{
+    text-align: center; 
+}
+
+.alinhar-direita{
+    text-align: right;
+}
+
+#copy{
+    padding: 20px 0px;
+    text-align: center;
+}
+
+#form-grid option{
+    font-size: 1.1rem;      
+}
+
+#msg{
+    width: 100%;
+    height: 180px;
+    margin-top: 20px;
+    padding: 12px 20px;
+    border: 1px solid #202c73;
+    border-radius: 4px;
+}
+
+#form-aviso{
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    color: #6e6d6d;
+}
+
+.borda-erro{
+    border: 1px solid red !important;
+}
+
+.borda-original{
+
+}
+
+
+#form-alerta{
+    background: #F2A007;
+    border-radius: 4px;
+    padding: 30px;
+    margin: 10px 0px;
+    color: #202c73;
+    font-weight: bold;
+}
+/* final do CSS Desktop */
+
+
+
+/* inicio do CSS responsivo */
+/* o CSS inserido dentro @media abaixo, será carregado quando o dispositivo possuir tela com largura menor ou igual a 600px */
+/* Será o responsivo, desse código p/ cima é o DESKTOP */
+
+@media only screen and (max-width: 600px) {
+   header{
+    width: 100%;
+    padding: 10px;
+    align-items: start;
+    flex-direction: column;
+    justify-content: start;
+    min-height: auto;
+   } 
+
+   header ul{
+    padding: 0;
+   }
+
+   #menu{
+    display: none;
+   }
+
+   #menu li{
+    margin: 10px 0;
+   }
+
+   #menu a{
+    padding: 10px 0;
+
+   }
+
+   #bars{
+    display: block;
+   }
+
+   #menu{
+    flex-direction: column;
+   }
+
+   #perfil{
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 0;
+   }
+
+   #perfil img{
+    width: 100%;
+   }
+
+   #perfil-dados h1{
+    font-size: 3rem;
+   }
+
+
+
+
+   #projetos{
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 0;
+   }
+
+   #cursos-principal{
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 0;
+   }
+
+   #footer-conteudo{
+    width: 100%;
+    padding: 10px;
+   }
+
+    #cursos-lista{
+    flex-wrap: wrap; 
+    padding: 10px;   
+   } 
+
+   
+
+
+   #form-grid input{
+    width: 100%;
+   }
+
+   #footer-conteudo h2{
+    font-size: 3rem;
+   }
+
+   #footer-inferior{
+    grid-template-columns: 1fr;
+    padding: 10px;
+    text-align: center;
+   }
+
+   .alinhar-direita{
+    text-align: center;
+   }
+
+   #cursos-complementares, #idiomas{
+    padding: 10px;
+   }
+
+   
+
+   #cursos-principal h2, #projetos h2{
+    font-size: 4rem;
+    max-width: 100%;
+    text-align: center;
+   }
+
+   #cursos-texto-principal, #projetos-texto-principal{
+    padding: 10px;
+   }
+
+   #perfil-dados{
+    text-align: center;
+   }
+
+}
+
+
+/* final do CSS responsivo */
