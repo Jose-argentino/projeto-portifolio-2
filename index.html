@@ -51,7 +51,8 @@
                         <li>Figma</li>
                     </ul>                
             </div>
-            <!-- <div class="separador">━</div> -->
+
+           
             <div id="projetos-lista">              
                 <h3>Projeto Músicas</h3>
                 <h3>Desenvolvedor UI/UX</h3>
@@ -92,7 +93,7 @@
     <!-- final da sessao de projetos -->
 
     <!-- inicio da sessao de cursos -->
-    
+
     <section id="cursos">
         <div id="cursos-principal">
             <div>
@@ -158,6 +159,7 @@
         </div>        
     </section>
     <!-- final da sessao de cursos -->
+
     <footer id="contato">
         <div id="footer-conteudo">    
             <h2>Contato</h2>        
@@ -218,53 +220,62 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script>
-    const menuResponsivo = () =>{
-        $('#menu').toggle()
-    }
-    
-
-
     const enviarContato = () => {
-    
+
       validaCampoVazio(nome)
       validaCampoVazio(email)
+      validaCampoVazio(telefone)
       validaCampoVazio(tipo)
-
-
-      if(nome.value != '' && email.value !='' && tipo.value !=''){
-        Swal.fire({
-            title: "Sucesso!",
-            text: `Obrigado, aguarde nosso contato em brebe!`,
-            icon: "success"
-        });
-        let form = document.getElementById('form-contato')
-
-        form.reset()
-        
-      }
-
+      validaCampoVazio(msg)
     }
-    
+
+    // função de validar se os campos estão ou não vasios
     const validaCampoVazio = (campo) =>{
         if(campo.value == ''){
             campo.style.border = '1px solid red'
-
-            document.getElementById('div-form-alerta').innerHTML = (`
-            <div id="form-alerta">
-                Preencha todos os campos obrigatórios!
-            </div>
-            `)
-
         }else{
             campo.style.border = '1px solid #202c73'
         }
     }
 
-</script>  
-
-
+    // abaixo codigo mais completo
+    // const menuResponsivo = () =>{
+    //     $('#menu').toggle()
+    // }
     
+    // // arrow function, forma mais correta de escrever uma função
+    // const enviarContato = () => {
+    
+    //   validaCampoVazio(nome)
+    //   validaCampoVazio(email)
+    //   validaCampoVazio(tipo)
 
+    //   if(nome.value != '' && email.value !='' && tipo.value !=''){
+    //     Swal.fire({
+    //         title: "Sucesso!",
+    //         text: `Obrigado, aguarde nosso contato em brebe!`,
+    //         icon: "success"
+    //     });
+    //     let form = document.getElementById('form-contato')
 
+    //     form.reset()
+    //   }
+    // }
+    
+    // const validaCampoVazio = (campo) =>{
+    //     if(campo.value == ''){
+    //         campo.style.border = '1px solid red'
+
+    //         document.getElementById('div-form-alerta').innerHTML = (`
+    //         <div id="form-alerta">
+    //             Preencha todos os campos obrigatórios!
+    //         </div>
+    //         `)
+
+    //     }else{
+    //         campo.style.border = '1px solid #202c73'
+    //     }
+    // }
+</script>  
 </body>
 </html>
