@@ -163,7 +163,8 @@
     <footer id="contato">
         <div id="footer-conteudo">    
             <h2>Contato</h2>        
-            <form action="" id="form-contato">
+            
+            <form action="" id="form">
             <div id="form-grid">
                 <input type="text" name="nome" id="nome" placeholder="Nome*">
                 <input type="email" name="email" id="email" placeholder="E-mail*">
@@ -216,76 +217,12 @@
 
     </footer>
 
-<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- importamos bibriotecas JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <!-- chamamos o arquivo JS que esta a parte -->
+    <script type="text/javascript" src="js/script-form.js"></script>
 
-<!-- <script type="text/javascript" src="/js/script-form.js"></script> -->
-<script>
-    const enviarContato = () => {
-
-      validaCampoVazio(nome)
-      validaCampoVazio(email)
-      validaCampoVazio(telefone)
-      validaCampoVazio(tipo)
-      validaCampoVazio(msg)
-
-    //   se todos os campos estao certos, os dados são enviados para backend
-    if(nome.value != '' && email.value !='' && telefone.value !=''&& tipo.value !='' && msg.value !=''){
-        // aqui os dados são enviados para o backend
-        // != corresponde a diferente
-        // == corresponde a igual - compara
-        // = atribui um valor
-    }
-    }
-
-    // função de validar se os campos estão ou não vasios
-    const validaCampoVazio = (campo) =>{
-        if(campo.value == ''){
-            campo.style.border = '1px solid red'
-        }else{
-            campo.style.border = '1px solid #202c73'
-        }
-    }
-
-    // abaixo codigo mais completo
-    // const menuResponsivo = () =>{
-    //     $('#menu').toggle()
-    // }
-    
-    // // arrow function, forma mais correta de escrever uma função
-    // const enviarContato = () => {
-    
-    //   validaCampoVazio(nome)
-    //   validaCampoVazio(email)
-    //   validaCampoVazio(tipo)
-
-    //   if(nome.value != '' && email.value !='' && tipo.value !=''){
-    //     Swal.fire({
-    //         title: "Sucesso!",
-    //         text: `Obrigado, aguarde nosso contato em brebe!`,
-    //         icon: "success"
-    //     });
-    //     let form = document.getElementById('form-contato')
-
-    //     form.reset()
-    //   }
-    // }
-    
-    // const validaCampoVazio = (campo) =>{
-    //     if(campo.value == ''){
-    //         campo.style.border = '1px solid red'
-
-    //         document.getElementById('div-form-alerta').innerHTML = (`
-    //         <div id="form-alerta">
-    //             Preencha todos os campos obrigatórios!
-    //         </div>
-    //         `)
-
-    //     }else{
-    //         campo.style.border = '1px solid #202c73'
-    //     }
-    // }
-</script>  
 </body>
 </html>
