@@ -219,6 +219,8 @@
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+
+<!-- <script type="text/javascript" src="/js/script-form.js"></script> -->
 <script>
     const enviarContato = () => {
 
@@ -227,6 +229,14 @@
       validaCampoVazio(telefone)
       validaCampoVazio(tipo)
       validaCampoVazio(msg)
+
+    //   se todos os campos estao certos, os dados são enviados para backend
+    if(nome.value != '' && email.value !='' && telefone.value !=''&& tipo.value !='' && msg.value !=''){
+        // aqui os dados são enviados para o backend
+        // != corresponde a diferente
+        // == corresponde a igual - compara
+        // = atribui um valor
+    }
     }
 
     // função de validar se os campos estão ou não vasios
