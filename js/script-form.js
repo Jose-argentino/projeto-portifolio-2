@@ -42,6 +42,11 @@ const validaCampoVazio = (campo) =>{
 
 
 
+
+
+
+
+
 // abaixo codigo mais completo
 // const menuResponsivo = () =>{
 //     $('#menu').toggle()
