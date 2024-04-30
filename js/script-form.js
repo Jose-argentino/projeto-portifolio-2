@@ -15,7 +15,7 @@ const enviarContato = () => {
     // == corresponde a igual - compara
     // = atribui um valor
 
-    let dados = new Formdata(form)
+    let dados = new FormData(form)
     // criou uma variavel com nome dados, e informou que as informaçoes vao vir do id=form
       fetch('backend/contato.php', {
           // enviar os dados usando a fetch API ('AJAX')
@@ -24,6 +24,10 @@ const enviarContato = () => {
         body: dados
       }
     )
+    .then(response => response.json())
+    .then(dados =>{
+      alert(dados.MSG)
+    })
   }
 }
 
