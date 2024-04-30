@@ -1,7 +1,21 @@
 // um padrão de boa prática é que os nomes em JS quando composto todo nome que sucede o primeiro sempre vai começar com letra maiúscula.
 
-const enviarContato = () => {
+// mascara imput telefone
+Inputmask({
+  mask:["(99) 9999-9999", "(99) 99999-9999"]
+}).mask(telefone)
 
+
+// Inputmask({
+//   mask:["999.999.999-99"]
+// }).mask(cpf)
+
+
+// Inputmask({
+//   mask:["99.999-999"]
+// }).mask(cep)
+
+const enviarContato = () => {
   validaCampoVazio(nome)
   validaCampoVazio(email)
   validaCampoVazio(telefone)
@@ -24,20 +38,37 @@ const enviarContato = () => {
         body: dados
       }
     )
+
     .then(response => response.json())
     .then(dados =>{
-      alert(dados.MSG)
+      // resposta do Backend
+      if(dados.STATUS == 0){
+        Swal.fire({
+          title: 'Atenção',
+          text: dados.MSG,
+          icon: 'error'
+        })
+      } else{
+        Swal.fire({
+          title: 'Atenção',
+          text: dados.MSG,
+          icon: 'success'
+        })
+        // se deu certo vai limpar o formulario
+        form.reset()
+      }
     })
+    
   }
 }
 
 // função de validar se os campos estão ou não vasios
 const validaCampoVazio = (campo) =>{
-      if(campo.value == ''){
-        campo.style.border = '1px solid red'
-    }else{
-        campo.style.border = '1px solid #202c73'
-    }
+  if(campo.value == ''){
+    campo.style.border = '1px solid red'
+  }else{
+    campo.style.border = '1px solid #202c73'
+  }
 }
 
 
